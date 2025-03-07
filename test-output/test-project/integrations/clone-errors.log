@@ -1,0 +1,10 @@
+[
+  {
+    "repo": "langchain",
+    "error": "Failed to clone GitHub repository: Command failed: git clone --depth 1 --branch main https://github.com/langchain-ai/langchain.git /Users/mrdaoming/Downloads/39B/test-integrations/integrations/langchain\nCloning into '/Users/mrdaoming/Downloads/39B/test-integrations/integrations/langchain'...\nWarning: Remote branch main not found.\nFatal error: Remote branch main not found in upstream origin\n"
+  },
+  {
+    "repo": "solana-web3",
+    "error": "Failed to clone GitHub repository: Command failed: git clone --depth 1 --branch master https://github.com/solana-labs/solana-web3.js.git /Users/mrdaoming/Downloads/39B/test-integrations/integrations/solana-web3\nCloning into '/Users/mrdaoming/Downloads/39B/test-integrations/integrations/solana-web3'...\nWarning: Remote branch master not found.\nFatal error: Remote branch master not found in upstream origin\n"
+  }
+]

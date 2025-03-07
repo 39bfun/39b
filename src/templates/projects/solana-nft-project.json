@@ -1,0 +1,67 @@
+{
+  "name": "Solana NFT Project",
+  "description": "A Solana-specific NFT project template with Metaplex integration and React frontend",
+  "structure": {
+    "contracts": {
+      "nft-program": {
+        "Cargo.toml": "# Cargo configuration for Solana NFT program",
+        "src": {
+          "lib.rs": "// Solana NFT program implementation using Metaplex standards",
+          "entrypoint.rs": "// Program entrypoint definition",
+          "processor.rs": "// Instruction processor implementation",
+          "state.rs": "// Program state definitions",
+          "instruction.rs": "// Instruction definitions"
+        }
+      }
+    },
+    "frontend": {
+      "src": {
+        "components": {
+          "WalletConnector.jsx": "// Solana wallet connector component using @solana/wallet-adapter",
+          "NFTCard.jsx": "// NFT card display component",
+          "NFTGallery.jsx": "// NFT gallery component",
+          "MintForm.jsx": "// NFT minting form"
+        },
+        "hooks": {
+          "useSolana.js": "// Custom hook for Solana interactions",
+          "useMetaplex.js": "// Custom hook for Metaplex interactions",
+          "useNFT.js": "// Custom hook for NFT interactions"
+        },
+        "pages": {
+          "index.js": "// Main page",
+          "mint.js": "// NFT minting page",
+          "gallery.js": "// NFT gallery page"
+        },
+        "styles": {
+          "globals.css": "/* Global styles */",
+          "NFT.module.css": "/* NFT-specific styles */"
+        },
+        "utils": {
+          "solana.js": "// Solana utility functions",
+          "metaplex.js": "// Metaplex utility functions",
+          "nft.js": "// NFT utility functions"
+        }
+      },
+      "public": {
+        "favicon.ico": null,
+        "placeholder.png": null
+      },
+      "assets": {
+        "metadata": {
+          "metadata-template.json": "{\n  \"name\": \"{{NFTName}} #$ID\",\n  \"description\": \"{{NFTDescription}}\",\n  \"image\": \"https://arweave.net/$HASH\",\n  \"attributes\": []\n}"
+        }
+      }
+    },
+    "scripts": {
+      "deploy.js": "// Program deployment script",
+      "create-collection.js": "// Script to create NFT collection using Metaplex",
+      "mint-nft.js": "// Script to mint NFTs using Metaplex",
+      "upload-assets.js": "// Script to upload assets to Arweave"
+    },
+    "config": {
+      ".env.example": "SOLANA_PRIVATE_KEY=\nSOLANA_RPC_URL=\nCOLLECTION_MINT_ADDRESS=\nARWEAVE_KEY_PATH=",
+      "solana-program.config.js": "// Solana program configuration"
+    },
+    "README.md": "# {{ProjectName}}\n\n{{ProjectDescription}}\n\n## Solana NFT Project\n\nThis project contains a Metaplex-compatible NFT implementation and a React frontend for minting and displaying NFTs.\n\n### Prerequisites\n\n- Node.js and npm\n- Rust and Cargo (for program development)\n- Solana CLI tools\n- Phantom or another Solana wallet\n\n### Installation\n\n```bash\nnpm install\n```\n\n### Collection Creation\n\n```bash\nnode scripts/create-collection.js\n```\n\n### NFT Minting\n\n```bash\nnode scripts/mint-nft.js\n```\n\n### Program Deployment (if using custom NFT program)\n\n```bash\ncd contracts/nft-program\ncargo build-bpf\nsolana program deploy target/deploy/nft_program.so\n```"
+  }
+}

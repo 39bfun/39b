@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <!-- Define gradients -->
+  <defs>
+    <linearGradient id="bg-gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4361EE" />
+      <stop offset="100%" stop-color="#7209B7" />
+    </linearGradient>
+    <linearGradient id="rocket-gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F72585" />
+      <stop offset="100%" stop-color="#FF9E00" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="150" cy="150" r="140" fill="url(#bg-gradient-1)"/>
+  <!-- Rocket icon -->
+  <g transform="translate(150, 150) rotate(-30) scale(0.65)">
+    <!-- Rocket body -->
+    <path d="M0,-120 C40,-110 60,-60 60,0 L60,50 C60,75 50,85 0,120 C-50,85 -60,75 -60,50 L-60,0 C-60,-60 -40,-110 0,-120 Z" fill="white"/>
+    <!-- Rocket window -->
+    <circle cx="0" cy="-40" r="20" fill="url(#rocket-gradient-1)"/>
+    <!-- Rocket wings -->
+    <path d="M60,50 L110,85 L85,85 L60,65 Z" fill="white"/>
+    <path d="M-60,50 L-110,85 L-85,85 L-60,65 Z" fill="white"/>
+    <!-- Rocket flame -->
+    <path d="M-30,120 C-45,155 -20,190 0,215 C20,190 45,155 30,120 Z" fill="url(#rocket-gradient-1)"/>
+  </g>
+</svg>

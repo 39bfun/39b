@@ -1,0 +1,48 @@
+{
+  "name": "Ethereum Token Project",
+  "description": "An Ethereum-specific token project template with ERC20 contract and React frontend",
+  "structure": {
+    "contracts": {
+      "ERC20Token.sol": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\ncontract {{TokenName}} is ERC20, Ownable {\n    constructor(uint256 initialSupply) ERC20(\"{{TokenName}}\", \"{{TokenSymbol}}\") {\n        _mint(msg.sender, initialSupply * 10 ** decimals());\n    }\n\n    function mint(address to, uint256 amount) public onlyOwner {\n        _mint(to, amount);\n    }\n}",
+      "TokenVesting.sol": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\ncontract TokenVesting is Ownable {\n    // Vesting schedule implementation\n}"
+    },
+    "frontend": {
+      "src": {
+        "components": {
+          "WalletConnector.jsx": "// Ethereum wallet connector component using ethers.js",
+          "TokenInfo.jsx": "// Token information display component",
+          "TokenTransfer.jsx": "// Token transfer component"
+        },
+        "hooks": {
+          "useEthereum.js": "// Custom hook for Ethereum interactions",
+          "useTokenContract.js": "// Custom hook for token contract interactions"
+        },
+        "pages": {
+          "index.js": "// Main page",
+          "token.js": "// Token management page"
+        },
+        "styles": {
+          "globals.css": "/* Global styles */",
+          "Token.module.css": "/* Token-specific styles */"
+        },
+        "utils": {
+          "ethereum.js": "// Ethereum utility functions",
+          "contracts.js": "// Contract interaction utilities"
+        }
+      },
+      "public": {
+        "favicon.ico": null,
+        "token-logo.png": null
+      }
+    },
+    "scripts": {
+      "deploy.js": "// Contract deployment script using hardhat",
+      "verify.js": "// Contract verification script"
+    },
+    "config": {
+      ".env.example": "INFURA_API_KEY=\nETHERSCAN_API_KEY=\nPRIVATE_KEY=\nCONTRACT_ADDRESS=",
+      "hardhat.config.js": "// Hardhat configuration file"
+    },
+    "README.md": "# {{ProjectName}}\n\n{{ProjectDescription}}\n\n## Ethereum Token Project\n\nThis project contains an ERC20 token contract and a React frontend for interacting with it.\n\n### Prerequisites\n\n- Node.js and npm\n- MetaMask or another Ethereum wallet\n\n### Installation\n\n```bash\nnpm install\n```\n\n### Deployment\n\n```bash\nnpx hardhat run scripts/deploy.js --network <network>\n```"
+  }
+}

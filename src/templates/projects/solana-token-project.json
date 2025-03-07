@@ -1,0 +1,57 @@
+{
+  "name": "Solana Token Project",
+  "description": "A Solana-specific token project template with SPL token and React frontend",
+  "structure": {
+    "contracts": {
+      "token-program": {
+        "Cargo.toml": "# Cargo configuration for Solana token program",
+        "src": {
+          "lib.rs": "// Solana token program implementation using SPL token standard",
+          "entrypoint.rs": "// Program entrypoint definition",
+          "processor.rs": "// Instruction processor implementation",
+          "state.rs": "// Program state definitions",
+          "instruction.rs": "// Instruction definitions"
+        }
+      }
+    },
+    "frontend": {
+      "src": {
+        "components": {
+          "WalletConnector.jsx": "// Solana wallet connector component using @solana/wallet-adapter",
+          "TokenInfo.jsx": "// Token information display component",
+          "TokenTransfer.jsx": "// Token transfer component"
+        },
+        "hooks": {
+          "useSolana.js": "// Custom hook for Solana interactions",
+          "useTokenAccount.js": "// Custom hook for token account interactions"
+        },
+        "pages": {
+          "index.js": "// Main page",
+          "token.js": "// Token management page"
+        },
+        "styles": {
+          "globals.css": "/* Global styles */",
+          "Token.module.css": "/* Token-specific styles */"
+        },
+        "utils": {
+          "solana.js": "// Solana utility functions",
+          "token.js": "// Token utility functions"
+        }
+      },
+      "public": {
+        "favicon.ico": null,
+        "token-logo.png": null
+      }
+    },
+    "scripts": {
+      "deploy.js": "// Token deployment script using @solana/web3.js",
+      "create-token.js": "// Script to create SPL token",
+      "airdrop.js": "// Token airdrop script"
+    },
+    "config": {
+      ".env.example": "SOLANA_PRIVATE_KEY=\nSOLANA_RPC_URL=\nTOKEN_MINT_ADDRESS=",
+      "solana-program.config.js": "// Solana program configuration"
+    },
+    "README.md": "# {{ProjectName}}\n\n{{ProjectDescription}}\n\n## Solana Token Project\n\nThis project contains an SPL token implementation and a React frontend for interacting with it.\n\n### Prerequisites\n\n- Node.js and npm\n- Rust and Cargo (for program development)\n- Solana CLI tools\n- Phantom or another Solana wallet\n\n### Installation\n\n```bash\nnpm install\n```\n\n### Token Creation\n\n```bash\nnode scripts/create-token.js\n```\n\n### Program Deployment (if using custom token program)\n\n```bash\ncd contracts/token-program\ncargo build-bpf\nsolana program deploy target/deploy/token_program.so\n```"
+  }
+}

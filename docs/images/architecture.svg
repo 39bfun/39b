@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define gradients and styles -->
+  <defs>
+    <linearGradient id="header-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4361EE" />
+      <stop offset="100%" stop-color="#7209B7" />
+    </linearGradient>
+    <linearGradient id="core-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3A0CA3" />
+      <stop offset="100%" stop-color="#4361EE" />
+    </linearGradient>
+    <linearGradient id="function-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7209B7" />
+      <stop offset="100%" stop-color="#F72585" />
+    </linearGradient>
+    <linearGradient id="interface-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F72585" />
+      <stop offset="100%" stop-color="#FF9E00" />
+    </linearGradient>
+    <linearGradient id="blockchain-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4CC9F0" />
+      <stop offset="100%" stop-color="#4361EE" />
+    </linearGradient>
+    <style>
+      .title { font: bold 24px sans-serif; fill: white; }
+      .subtitle { font: bold 18px sans-serif; fill: white; }
+      .label { font: 14px sans-serif; fill: white; }
+      .small-label { font: 12px sans-serif; fill: white; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <rect x="50" y="30" width="700" height="50" rx="10" fill="url(#header-gradient)" />
+  <text x="400" y="60" text-anchor="middle" class="title">39B Technical Architecture</text>
+
+  <!-- Core Layer -->
+  <rect x="100" y="120" width="600" height="100" rx="10" fill="url(#core-gradient)" />
+  <text x="400" y="145" text-anchor="middle" class="subtitle">Core Layer</text>
+  
+  <rect x="120" y="160" width="130" height="40" rx="5" fill="#3A0CA3" stroke="white" stroke-width="1" />
+  <text x="185" y="185" text-anchor="middle" class="small-label">Claude AI Service</text>
+  
+  <rect x="270" y="160" width="130" height="40" rx="5" fill="#3A0CA3" stroke="white" stroke-width="1" />
+  <text x="335" y="185" text-anchor="middle" class="small-label">Project Generator</text>
+  
+  <rect x="420" y="160" width="130" height="40" rx="5" fill="#3A0CA3" stroke="white" stroke-width="1" />
+  <text x="485" y="185" text-anchor="middle" class="small-label">Template Manager</text>
+  
+  <rect x="570" y="160" width="130" height="40" rx="5" fill="#3A0CA3" stroke="white" stroke-width="1" />
+  <text x="635" y="185" text-anchor="middle" class="small-label">Web3 Project Manager</text>
+
+  <!-- Function Layer -->
+  <rect x="100" y="240" width="600" height="100" rx="10" fill="url(#function-gradient)" />
+  <text x="400" y="265" text-anchor="middle" class="subtitle">Function Layer</text>
+  
+  <rect x="120" y="280" width="130" height="40" rx="5" fill="#7209B7" stroke="white" stroke-width="1" />
+  <text x="185" y="305" text-anchor="middle" class="small-label">Blockchain Adapter</text>
+  
+  <rect x="270" y="280" width="130" height="40" rx="5" fill="#7209B7" stroke="white" stroke-width="1" />
+  <text x="335" y="305" text-anchor="middle" class="small-label">Code Generation Engine</text>
+  
+  <rect x="420" y="280" width="130" height="40" rx="5" fill="#7209B7" stroke="white" stroke-width="1" />
+  <text x="485" y="305" text-anchor="middle" class="small-label">Test Tool Integration</text>
+  
+  <rect x="570" y="280" width="130" height="40" rx="5" fill="#7209B7" stroke="white" stroke-width="1" />
+  <text x="635" y="305" text-anchor="middle" class="small-label">Deployment Manager</text>
+
+  <!-- Interface Layer -->
+  <rect x="100" y="360" width="600" height="100" rx="10" fill="url(#interface-gradient)" />
+  <text x="400" y="385" text-anchor="middle" class="subtitle">Interface Layer</text>
+  
+  <rect x="180" y="400" width="130" height="40" rx="5" fill="#F72585" stroke="white" stroke-width="1" />
+  <text x="245" y="425" text-anchor="middle" class="small-label">CLI Interface</text>
+  
+  <rect x="330" y="400" width="130" height="40" rx="5" fill="#F72585" stroke="white" stroke-width="1" />
+  <text x="395" y="425" text-anchor="middle" class="small-label">API Interface</text>
+  
+  <rect x="480" y="400" width="130" height="40" rx="5" fill="#F72585" stroke="white" stroke-width="1" />
+  <text x="545" y="425" text-anchor="middle" class="small-label">Web Interface</text>
+
+  <!-- Blockchain Layer -->
+  <rect x="100" y="480" width="600" height="80" rx="10" fill="url(#blockchain-gradient)" />
+  <text x="400" y="505" text-anchor="middle" class="subtitle">Blockchain Ecosystem</text>
+  
+  <rect x="120" y="520" width="100" height="30" rx="5" fill="#4CC9F0" stroke="white" stroke-width="1" />
+  <text x="170" y="540" text-anchor="middle" class="small-label">Ethereum</text>
+  
+  <rect x="240" y="520" width="100" height="30" rx="5" fill="#4CC9F0" stroke="white" stroke-width="1" />
+  <text x="290" y="540" text-anchor="middle" class="small-label">Solana</text>
+  
+  <rect x="360" y="520" width="100" height="30" rx="5" fill="#4CC9F0" stroke="white" stroke-width="1" />
+  <text x="410" y="540" text-anchor="middle" class="small-label">BNB Chain</text>
+  
+  <rect x="480" y="520" width="100" height="30" rx="5" fill="#4CC9F0" stroke="white" stroke-width="1" />
+  <text x="530" y="540" text-anchor="middle" class="small-label">Base Chain</text>
+  
+  <rect x="600" y="520" width="100" height="30" rx="5" fill="#4CC9F0" stroke="white" stroke-width="1" />
+  <text x="650" y="540" text-anchor="middle" class="small-label">Cross-Chain Bridge</text>
+
+  <!-- Connection Lines -->
+  <line x1="185" y1="200" x2="185" y2="280" stroke="white" stroke-width="1" stroke-dasharray="5,5" />
+  <line x1="400" y1="220" x2="400" y2="240" stroke="white" stroke-width="2" />
+  <line x1="400" y1="340" x2="400" y2="360" stroke="white" stroke-width="2" />
+  <line x1="400" y1="460" x2="400" y2="480" stroke="white" stroke-width="2" />
+</svg>

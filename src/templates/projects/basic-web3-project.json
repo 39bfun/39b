@@ -1,0 +1,30 @@
+{
+  "name": "Basic Web3 Project",
+  "description": "A simple Web3 project template with contract and frontend",
+  "structure": {
+    "contracts": {
+      "Token.sol": "{{TokenContract}}"
+    },
+    "frontend": {
+      "src": {
+        "components": {
+          "WalletConnector.jsx": "{{WalletConnector}}",
+          "TokenInfo.jsx": "// Token info component"
+        },
+        "pages": {
+          "index.js": "// Main page"
+        },
+        "styles": {
+          "globals.css": "/* Global styles */"
+        }
+      },
+      "public": {
+        "favicon.ico": null
+      }
+    },
+    "scripts": {
+      "deploy.js": "// Contract deployment script"
+    },
+    "README.md": "# {{ProjectName}}\n\n{{ProjectDescription}}"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Solana DApp Project",
+  "description": "A Solana-specific decentralized application template with Rust programs and React frontend",
+  "structure": {
+    "contracts": {
+      "dapp-program": {
+        "Cargo.toml": "# Cargo configuration for Solana DApp program",
+        "src": {
+          "lib.rs": "// Solana DApp program implementation",
+          "entrypoint.rs": "// Program entrypoint definition",
+          "processor.rs": "// Instruction processor implementation",
+          "state.rs": "// Program state definitions",
+          "instruction.rs": "// Instruction definitions",
+          "error.rs": "// Program error definitions"
+        }
+      }
+    },
+    "frontend": {
+      "src": {
+        "components": {
+          "WalletConnector.jsx": "// Solana wallet connector component using @solana/wallet-adapter",
+          "DAppInterface.jsx": "// Main DApp interface component",
+          "TransactionHistory.jsx": "// Transaction history component",
+          "UserAccount.jsx": "// User account component"
+        },
+        "hooks": {
+          "useSolana.js": "// Custom hook for Solana interactions",
+          "useProgram.js": "// Custom hook for program interactions",
+          "useTransactions.js": "// Custom hook for tracking transactions"
+        },
+        "pages": {
+          "index.js": "// Main page",
+          "dashboard.js": "// User dashboard page",
+          "transactions.js": "// Transactions page"
+        },
+        "styles": {
+          "globals.css": "/* Global styles */",
+          "DApp.module.css": "/* DApp-specific styles */"
+        },
+        "utils": {
+          "solana.js": "// Solana utility functions",
+          "program.js": "// Program interaction utilities",
+          "formatters.js": "// Data formatting utilities",
+          "borsh.js": "// Borsh serialization utilities"
+        },
+        "context": {
+          "SolanaContext.js": "// Solana context provider",
+          "ProgramContext.js": "// Program-specific context provider"
+        }
+      },
+      "public": {
+        "favicon.ico": null,
+        "logo.png": null
+      }
+    },
+    "scripts": {
+      "deploy.js": "// Program deployment script",
+      "initialize.js": "// Script to initialize program state",
+      "test-transaction.js": "// Script to test program transactions"
+    },
+    "config": {
+      ".env.example": "SOLANA_PRIVATE_KEY=\nSOLANA_RPC_URL=\nPROGRAM_ID=",
+      "solana-program.config.js": "// Solana program configuration"
+    },
+    "README.md": "# {{ProjectName}}\n\n{{ProjectDescription}}\n\n## Solana DApp Project\n\nThis project contains Rust programs and a React frontend for a Solana decentralized application.\n\n### Prerequisites\n\n- Node.js and npm\n- Rust and Cargo (for program development)\n- Solana CLI tools\n- Phantom or another Solana wallet\n\n### Installation\n\n```bash\nnpm install\n```\n\n### Program Deployment\n\n```bash\ncd contracts/dapp-program\ncargo build-bpf\nsolana program deploy target/deploy/dapp_program.so\n```\n\n### Frontend Development\n\n```bash\nnpm run dev\n```"
+  }
+}

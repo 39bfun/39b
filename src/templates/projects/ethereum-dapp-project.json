@@ -1,0 +1,57 @@
+{
+  "name": "Ethereum DApp Project",
+  "description": "An Ethereum-specific decentralized application template with smart contracts and React frontend",
+  "structure": {
+    "contracts": {
+      "DApp.sol": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\ncontract {{DAppName}} is Ownable {\n    // State variables\n    string public name;\n    mapping(address => uint256) public userBalances;\n    \n    // Events\n    event Deposit(address indexed user, uint256 amount);\n    event Withdrawal(address indexed user, uint256 amount);\n    \n    constructor(string memory _name) {\n        name = _name;\n    }\n    \n    // Deposit function\n    function deposit() public payable {\n        userBalances[msg.sender] += msg.value;\n        emit Deposit(msg.sender, msg.value);\n    }\n    \n    // Withdraw function\n    function withdraw(uint256 amount) public {\n        require(userBalances[msg.sender] >= amount, \"Insufficient balance\");\n        userBalances[msg.sender] -= amount;\n        payable(msg.sender).transfer(amount);\n        emit Withdrawal(msg.sender, amount);\n    }\n    \n    // Get contract balance\n    function getContractBalance() public view returns (uint256) {\n        return address(this).balance;\n    }\n    \n    // Get user balance\n    function getUserBalance(address user) public view returns (uint256) {\n        return userBalances[user];\n    }\n}",
+      "Storage.sol": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\ncontract Storage is Ownable {\n    // Data storage implementation\n    mapping(bytes32 => bytes) private data;\n    \n    // Store data\n    function store(bytes32 key, bytes memory value) public onlyOwner {\n        data[key] = value;\n    }\n    \n    // Retrieve data\n    function retrieve(bytes32 key) public view returns (bytes memory) {\n        return data[key];\n    }\n}"
+    },
+    "frontend": {
+      "src": {
+        "components": {
+          "WalletConnector.jsx": "// Ethereum wallet connector component using ethers.js",
+          "DAppInterface.jsx": "// Main DApp interface component",
+          "TransactionHistory.jsx": "// Transaction history component",
+          "UserBalance.jsx": "// User balance component"
+        },
+        "hooks": {
+          "useEthereum.js": "// Custom hook for Ethereum interactions",
+          "useDAppContract.js": "// Custom hook for DApp contract interactions",
+          "useTransactions.js": "// Custom hook for tracking transactions"
+        },
+        "pages": {
+          "index.js": "// Main page",
+          "dashboard.js": "// User dashboard page",
+          "transactions.js": "// Transactions page"
+        },
+        "styles": {
+          "globals.css": "/* Global styles */",
+          "DApp.module.css": "/* DApp-specific styles */"
+        },
+        "utils": {
+          "ethereum.js": "// Ethereum utility functions",
+          "contracts.js": "// Contract interaction utilities",
+          "formatters.js": "// Data formatting utilities"
+        },
+        "context": {
+          "Web3Context.js": "// Web3 context provider",
+          "DAppContext.js": "// DApp-specific context provider"
+        }
+      },
+      "public": {
+        "favicon.ico": null,
+        "logo.png": null
+      }
+    },
+    "scripts": {
+      "deploy.js": "// Contract deployment script using hardhat",
+      "verify.js": "// Contract verification script",
+      "seed-data.js": "// Script to seed initial data"
+    },
+    "config": {
+      ".env.example": "INFURA_API_KEY=\nETHERSCAN_API_KEY=\nPRIVATE_KEY=\nCONTRACT_ADDRESS=",
+      "hardhat.config.js": "// Hardhat configuration file"
+    },
+    "README.md": "# {{ProjectName}}\n\n{{ProjectDescription}}\n\n## Ethereum DApp Project\n\nThis project contains smart contracts and a React frontend for a decentralized application.\n\n### Prerequisites\n\n- Node.js and npm\n- MetaMask or another Ethereum wallet\n\n### Installation\n\n```bash\nnpm install\n```\n\n### Deployment\n\n```bash\nnpx hardhat run scripts/deploy.js --network <network>\n```\n\n### Frontend Development\n\n```bash\nnpm run dev\n```"
+  }
+}
