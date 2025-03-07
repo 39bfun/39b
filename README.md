@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="./public/logo.svg" alt="39B Logo" width="150" height="150"/>
-  <h1>39b - AI-powered Web3 Project Development Framework</h1>
+  <h1>39b - Revolutionizing Web3 Development with AI</h1>
   <p>
     <a href="https://www.39b.fun/" target="_blank">Official Website</a> |
     <a href="https://x.com/39b_fun" target="_blank">Twitter</a> |
@@ -16,6 +16,20 @@
 
 Whether you're an experienced blockchain developer or a newcomer, 39b can help you quickly build, test, and deploy high-quality Web3 applications. Our mission is to lower the barrier to Web3 development and accelerate blockchain technology innovation and adoption.
 
+## Current Development Status
+
+The project is currently in active development with the following milestones:
+
+- [x] Core AI integration with Claude API
+- [x] Basic project generation framework
+- [x] Support for Ethereum and Solana chains
+- [x] Smart contract template library
+- [x] CLI interface implementation
+- [ ] Web interface development (In Progress)
+- [ ] Cross-chain functionality (Planned)
+- [ ] Advanced testing framework (Planned)
+- [ ] Community template marketplace (Planned)
+
 ## Technical Architecture
 
 39b adopts a modular, extensible architecture design, primarily consisting of the following core components:
@@ -26,23 +40,23 @@ Whether you're an experienced blockchain developer or a newcomer, 39b can help y
 
 ### Core Layer
 
-- **Claude AI Service**: Interacts with Claude API, handles natural language to code conversion
-- **Project Generator**: Generates complete project structure based on user input and templates
-- **Template Manager**: Manages and applies various blockchain-specific project templates
-- **Web3 Project Manager**: Coordinates component work, manages project lifecycle
+- **Claude AI Service**: Handles natural language processing and code generation
+- **Project Generator**: Creates complete project structures from templates and AI input
+- **Template Manager**: Organizes and applies blockchain-specific project templates
+- **Web3 Project Manager**: Orchestrates components and manages project lifecycle
 
 ### Function Layer
 
-- **Blockchain Adapter**: Provides unified interface for different blockchains
-- **Code Generation Engine**: Optimizes and customizes AI-generated code
-- **Test Tool Integration**: Automatically generates test cases and test scripts
-- **Deployment Manager**: Simplifies multi-chain deployment process
+- **Blockchain Adapter**: Provides unified interfaces for different blockchains
+- **Code Generation Engine**: Optimizes AI-generated code for production use
+- **Test Tool Integration**: Generates comprehensive test suites
+- **Deployment Manager**: Handles multi-chain deployment processes
 
 ### Interface Layer
 
-- **CLI Interface**: Command-line tools, supports scripted operations
-- **API Interface**: For third-party application integration
-- **Web Interface**: (Planned) Provides graphical operation interface
+- **CLI Interface**: Command-line tools for development workflow
+- **API Interface**: Integration endpoints for third-party applications
+- **Web Interface**: Browser-based project management (In Development)
 
 ## Workflow
 
@@ -176,20 +190,27 @@ node src/demo/web3-project-demo.js
 
 ```
 39b/
-├── src/
-│   ├── cli/                  # Command line tools
-│   ├── core/                 # Core functionality
-│   │   ├── claude.js         # Claude AI service
-│   │   ├── projectGenerator.js # Project generator
-│   │   ├── templateManager.js # Template manager
-│   │   └── web3ProjectManager.js # Web3 project manager
-│   ├── demo/                 # Demo scripts
+├── src/                      # Source code directory
+│   ├── cli/                  # Command line interface tools
+│   │   └── web3-project-cli.js  # Main CLI implementation
+│   ├── core/                 # Core framework components
+│   │   ├── claude.js         # Claude AI integration service
+│   │   ├── projectGenerator.js # Project generation engine
+│   │   ├── templateManager.js # Template management system
+│   │   └── web3ProjectManager.js # Project lifecycle manager
+│   ├── demo/                 # Example implementations
+│   │   ├── web3-project-demo.js # Basic usage demo
+│   │   └── enhanced-claude-api-demo.js # AI integration demo
 │   ├── templates/            # Project templates
+│   │   ├── contracts/       # Smart contract templates
+│   │   ├── frontend/        # UI component templates
+│   │   └── projects/        # Full project templates
 │   └── utils/                # Utility functions
-│       ├── blockchainEnhancer.js # Blockchain enhancer
-│       └── claudeEnhancer.js # Claude enhancer
-├── .env                      # Environment variables
-└── package.json             # Project configuration
+│       ├── blockchainEnhancer.js # Chain-specific optimizations
+│       └── claudeEnhancer.js # AI prompt engineering tools
+├── test/                     # Test files
+├── docs/                     # Documentation
+└── scripts/                  # Build and deployment scripts
 ```
 
 ## Usage
@@ -487,11 +508,9 @@ The framework provides comprehensive error handling mechanisms, including:
 
 ## Community and Support
 
-- **Official Website**: [https://www.39b.fun/](https://www.39b.fun/)
-- **Twitter**: [@39b_fun](https://x.com/39b_fun)
-- **GitHub**: [github.com/39b-dev/39b](https://github.com/39b-dev/39b)
-- **Documentation**: [docs.39b.fun](https://docs.39b.fun/)
-- **Community Forum**: [community.39b.fun](https://community.39b.fun/)
+- **GitHub Issues**: For bug reports and feature requests
+- **Twitter**: Follow [@39b_fun](https://x.com/39b_fun) for updates
+- **Email**: support@39b.fun
 
 ## Used Open Source Libraries
 
@@ -542,4 +561,24 @@ The framework provides comprehensive error handling mechanisms, including:
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Copyright (c) 2024 39b Development Team
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
