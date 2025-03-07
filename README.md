@@ -480,8 +480,8 @@ The framework provides comprehensive error handling mechanisms, including:
 
 ### Current Status
 
-- **Version**: v0.1.0-alpha
-- **Release Date**: March 2025
+- **Version**: v0.1.1-alpha
+- **Release Date**: March 2024
 - **Development Stage**: Alpha Test
 
 ### Completed Features
